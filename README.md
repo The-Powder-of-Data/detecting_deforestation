@@ -10,6 +10,9 @@ This project explores different methods to identify deforestation from satellite
 4. Cloud Hosting
 5. Resources
 
+## File Structure
+
+
 ## Overview
 
 ## Modeling & Data 
@@ -25,6 +28,7 @@ The next approach was pixel by pixel classification, otherwise known as semantic
 When the model was finalised we had a jacard_coeficient (similar to Mean IOU) of 0.752 for our validation set. We used *tensorflow* to handle training of a *UNet* architecture with some additional pooling and *imagenet* weights to start. The model ran for about 100 epochs.  
 
 Once our model was trained and predictions made a process was created to rejoin our previously processed patches. We do want a full size origional image after all. In this process it was found that is we simply stich each patch together there can be edge artifacts. So a blended approach was taken where each patch had a slight overlap with patches around it. Thus, allowing for a gausian blended apporach to be used and smooth out any edges. 
+https://www.youtube.com/watch?v=jvZm8REF2KY
 
 ---- Image of results
 *check out some results in our dashboard*
