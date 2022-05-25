@@ -8,34 +8,59 @@ My vision for this project was to use combine my Data Science learning and Satel
 
 ![Project Vision](../../output/content/vision_1.PNG)
 
-## 1. Multi Label Classification Notebook
+<br>
+
+## 1. **Multi Label Classification**
 The approach to this notebook was to create a model that can tag/label image tiles with observations. These results can then be used as layer 1 in our overall understanding and automation of processing satellite imagery of our earth.
 
 ![MLC Example](../../output/content/MLC_example_1.png)
 
 
 ### **Data & Processing**
-As a start point we aquired a dataset ***insert link***. The origional 22gb torrent is no longer being seeded, however there is an alternative link to a balanced samples that you can download ***here***. <br>
+As a start point we aquired a [dataset](https://www.kaggle.com/competitions/planet-understanding-the-amazon-from-space/data). The origional 22gb torrent is no longer being seeded, however there is an [alternative link](https://www.kaggle.com/datasets/nikitarom/planets-dataset) to a balanced samples that you can download. <br>
 
 For this example dataset you could choose not to do any pre processing as the satellie images come already broken into small enough tiles for preprocessing. If ingesting images from a [satellite API](https://www.programmableweb.com/news/top-10-satellites-apis/brief/2020/06/14) you would have to preprocess images into small enough patches/tiles in order for them to be ingested by the model. To see an example of this please look at the Semantic Segmentation Model approach. 
+<br> <br>
 
-### Model, Results & Application
-FastAI was a great libary once learning the basics. I was able to get great results using a few techiques that Fastai makes easy. 
+### **Model, Results & Application**
+FastAI was a great libary once learning the basics. I was able to get strong results using a few techiques. 
 - Disriminate Learning Rates
 - Transfer learning
 - Image sizing trick to increase the size of our dataset
-
-## 2. Semantic Segmentation Notebook
-Tensorflow was used as the main modeling libary for this notebook. Using transfer learning using a UNet architecutre with additional pooling yeilded decent results on the training dataset. I did also try a Resnet architecture with imagenet weights and found it yielded similar results. A large amount of learning around image data processing and how to evaluate a segmentation results went into this notebook. 
 <br>
 
-### Data Processing 
-One of the biggest learning lessons of this project was image processing to ensure they are the right shape to be ingested by our designed model. As satellite images are high resolution objects we do not have powerful enough resources to run models over all pixels as our input. To accomidate for this, a large image has to be broken down into smaller patches (sometimes refered to as image tiles). Once both images and training masks are divided into patches the data can then be inputted into the modle for training. 
+After a variety of iterations the max result attained was an f2 of 0.93 which puts this model in the top 60 results of 888 entries in the origional competiton.  
+
+![MLC Results](../../output/content/MLC_result.jpg)
+
 <br>
-Once the model has been trained the smaller image patches need to be stitched back together to make a whole. This was done origionally manually and then using the libray of ***Patchify*** to assist in the process. A large shoutout to ***insert patchify video*** for updating the code to a libary that has not had updates in the last few years. 
+
+## 2. **Semantic Segmentation Notebook**
+Tensorflow was used as the main modeling libary for this notebook. Using transfer learning and a UNet architecutre with additional pooling yeilded the best results on the training dataset. I did also try a Resnet architecture with imagenet weights and found it yielded similar results. However the exported model size of a Resnet architecture was significantly larger.
+
+A large amount of learning around image data processing and how to evaluate a segmentation results went into this notebook. This notebook is where a large portion of my time was spend during this project.
 
 ![Image Processing](../../output/content/Data_process_1.jpg)
+<br>
 
-### Model, Results & Application 
-Origionally this model was trained on a dataset of Dubai with 6 labels. After tuning the model to satisfactory levels, I experimented with predicting segmentation masks on BC satellite images. Even though this model was trained on a different context (Dubai) than what its intended application was to be (logging in BC) it is a starting step to this continued experiment. To my suprise it was able to pick out features such as clear cut forest quite well. The next steps would be to aquire training mask data for the intended region of use and compare results. 
+### **Data Processing** 
+One of the biggest learning lessons of this project was image processing to ensure right shape to be ingested by our model. As satellite images are high resolution files we do not have powerful enough resources to run models over all pixels as a single input. To accomidate for this, a large image has to be broken down into smaller patches (sometimes refered to as image tiles). Once both images and training masks are divided into patches the data can then be inputted into the modle for training. 
 
+![Process Detail](../../output/content/data_process_detail.jpg)
+
+Once the model has been trained and patches predicted, the smaller image tiles need to be stitched back together to make an origional image. This was done origionally with manual code and then using the libray of [Patchify](https://github.com/Vooban/Smoothly-Blend-Image-Patches) to assist in the process. A shoutout to [DigitalSreeni](https://www.youtube.com/c/DigitalSreeni) for fixing bugs in the libary that has not had updates in the last few years.
+
+I also experimented with using a smooth blending technique where tiles overlap and thus we can use a gausian blend to smooth out edge artifacts. This is the approach I used in the final model as it picked up more features in images than without. 
+![Pached Smooth Blend](../../output/content/patch_smooth_2_3.jpg)
+
+<br>
+
+### **Model, Results & Application**
+
+Using the Unet approach as my final model converged on a reasonable Jaccard Coefficient.
+![UNet Results](../../output/content/Unet_results_2.jpg)
+![Evan Metric](../../output/content/segment_result_eval.jpg)
+
+Origionally this model was trained on a dataset of Dubai with 6 labels. After tuning the model to satisfactory levels, I experimented with predicting segmentation masks on BC satellite images. Even though this model was trained on a different context (Dubai) than what its intended application was to be (logging in BC) it is a starting step to this continued experiment. To my suprise the model was able to pick out features such as clear cut forest quite well. The next steps would be to aquire training mask data for the intended region of use and compare results. 
+![BC Example](../../output/content/segment_result_bc.jpg)
+![BC Example](../../output/content/segment_result_bc2.jpg)
