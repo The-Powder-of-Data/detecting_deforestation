@@ -1,11 +1,15 @@
-# Detecting Deforestation
-This project explores different methods to identify deforestation from satellite imagery. I did the initial ground work for this repository as my final project whilst studying Data Science. I am now continuing to build upon it to develop my skills.
+![Title Graphic](output/content/Title_image.png)
+
+This project explores different methods to identify deforestation through satellite imagery data. The initial ground work for this repository was done as an individual 2 week project whilst studying Data Science at Lighthouse Labs. I am currently continuing to build out the project.
 <br>
-*Dashboard Link*
-*PPT Link*
+
+- Presnetation
+- Miro Planning Board
+
+--- 
 
 ## Content
-1. Overview
+1. [Overview](https://github.com/The-Powder-of-Data/detecting_deforestation#overview)
 2. Modeling & Data
 4. Cloud Hosting
 5. Resources
@@ -14,6 +18,8 @@ This project explores different methods to identify deforestation from satellite
 
 
 ## Overview
+![Overview Image](output/content/Overview_image.png)
+
 
 ## Modeling & Data 
 - **Multi Label Classification Model**: 
