@@ -1,14 +1,20 @@
-# Notebooks
+# Notebooks Intro
 These Jupyter Notebooks are the approaches to the models made so far. <br>
 Most of the work was done on Google Colab as a GPU makes a large difference for modle training
 <br>
 In the name of learning a new platform I wanted to have all my data on Google Cloud Platform. For these colab notebooks I have authenticated through my email with the project Google Cloud Buckets. If you would like to replicate this approach please setup a GCP account and you will get $300 for free for 80 days. ALternativly you could host your files locally. 
 
+My vision for this project was to use combine my Data Science learning and Satellite Imagery to build an ***Analytics Time Machine***. For the short duration of this project (2 weeks) I focused on the first 2 components. 
+
+![Project Vision](../../output/content/vision_1.PNG)
 
 ## 1. Multi Label Classification Notebook
 The approach to this notebook was to create a model that can tag/label image tiles with observations. These results can then be used as layer 1 in our overall understanding and automation of processing satellite imagery of our earth.
 
-### Data & Processing
+![MLC Example](../../output/content/MLC_example_1.png)
+
+
+### **Data & Processing**
 As a start point we aquired a dataset ***insert link***. The origional 22gb torrent is no longer being seeded, however there is an alternative link to a balanced samples that you can download ***here***. <br>
 
 For this example dataset you could choose not to do any pre processing as the satellie images come already broken into small enough tiles for preprocessing. If ingesting images from a [satellite API](https://www.programmableweb.com/news/top-10-satellites-apis/brief/2020/06/14) you would have to preprocess images into small enough patches/tiles in order for them to be ingested by the model. To see an example of this please look at the Semantic Segmentation Model approach. 
@@ -28,7 +34,7 @@ One of the biggest learning lessons of this project was image processing to ensu
 <br>
 Once the model has been trained the smaller image patches need to be stitched back together to make a whole. This was done origionally manually and then using the libray of ***Patchify*** to assist in the process. A large shoutout to ***insert patchify video*** for updating the code to a libary that has not had updates in the last few years. 
 
-- ***Insert image of patchify structure***
+![Image Processing](../../output/content/Data_process_1.jpg)
 
 ### Model, Results & Application 
 Origionally this model was trained on a dataset of Dubai with 6 labels. After tuning the model to satisfactory levels, I experimented with predicting segmentation masks on BC satellite images. Even though this model was trained on a different context (Dubai) than what its intended application was to be (logging in BC) it is a starting step to this continued experiment. To my suprise it was able to pick out features such as clear cut forest quite well. The next steps would be to aquire training mask data for the intended region of use and compare results. 
