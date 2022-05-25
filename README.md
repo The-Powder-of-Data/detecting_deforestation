@@ -10,9 +10,9 @@ This project explores different methods to identify deforestation through satell
 
 # **Content**
 1. [Overview](https://github.com/The-Powder-of-Data/detecting_deforestation#overview)
-2. Modeling
-4. Cloud Notes
-5. Resources
+2. [Modeling](https://github.com/The-Powder-of-Data/detecting_deforestation#modeling)
+4. [Cloud](https://github.com/The-Powder-of-Data/detecting_deforestation#cloud)
+5. [Resources](https://github.com/The-Powder-of-Data/detecting_deforestation#resources)
 
 <br>
 
@@ -92,7 +92,7 @@ Originally this model was trained on a [dataset](https://www.kaggle.com/datasets
 
 <br>
 
-# **Cloud Notes**
+# **Cloud**
 
 ## **Google Cloud Platform**
 In this project I focused on using *Google Cloud Platform* as much as possible. As I had previous experiance with AWS I wanted to take the oportunity to learn what GCP had to offer. In the spirit of everything Google I also used Googe Colab as my main IDE to utilize access to a GPU for training. 
