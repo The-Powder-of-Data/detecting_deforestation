@@ -30,7 +30,7 @@ My vision for this project was to use combine my Data Science learning and Satel
 <br>
  
 ## **Planning & Presentation**
-I am a very visual worker. My life and brain exists on the platform Miro which is the best online whiteboard I have found so far. You may be amused to hear that I have successfully workshoped virtual dates whilst in a long distance relationship on Miro! If interested I have linked my Miro workspace, final presentation and a few resources. If you ever want to talk about visual learning and collaboration platforms please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/josephluiz/). 
+I am a very visual worker. My life and brain exists on the platform Miro which is the best online whiteboard I have found so far. You may be amused to hear that I have successfully workshopped virtual dates whilst in a long distance relationship on Miro! If interested I have linked my Miro workspace, final presentation and a few resources. If you ever want to talk about visual learning and collaboration platforms please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/josephluiz/). 
 
 - [Miro Workspace](https://miro.com/app/board/uXjVO2axXTY=/?share_link_id=285273823775): This is where my visualy capture my brain, excuse the mess
 - [Presentation Recording](): If you would like to watch the 5 minute presentation (coming soon)
@@ -39,6 +39,7 @@ I am a very visual worker. My life and brain exists on the platform Miro which i
 # **Modeling**
 ## **Multi Label Classification**
 I started with the first layer to my solution. Learning how to approach a supervised multi label classification model. These results can then be used as layer 1 in our overall understanding and automation of processing satellite imagery of our earth.
+
 ![MLC Example](output/content/MLC_example_1.png)
  
  
