@@ -111,7 +111,7 @@ As a result of my explorations I created a streamlit script to host this model a
  
 # Resources
  
-### General Research
+### General
 - [Global Forest Watch](https://www.globalforestwatch.org/)
 - [Using Satellite Imagery to Investigate Deforestation on GFW](https://www.youtube.com/watch?v=bhm7dgqfsw4)
 - [Planet NICFI Platform](https://www.planet.com/nicfi/)
@@ -123,6 +123,7 @@ As a result of my explorations I created a streamlit script to host this model a
 - [Largest Satellite Imagery Companies](https://www.appgeo.com/top-satellite-and-aerial-imagery-companies/)
 - [Stats Can Satellite Image Story](https://www.statcan.gc.ca/en/data-science/network/satellite-imaging)
 - [Satellite Image Data Consumption](https://datacenterfrontier.com/terabytes-from-space-satellite-imaging-is-filling-data-centers/)
+- [Slide Styles & Graphics](https://slidesgo.com/)
  
 ### Achademic Papers / Articles
 - [A machine learning approach to map tropical selective logging](https://www.sciencedirect.com/science/article/pii/S0034425718305534)
