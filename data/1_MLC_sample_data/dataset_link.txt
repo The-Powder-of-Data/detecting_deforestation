@@ -1,0 +1,1 @@
+the origional Kaggle competition can be found at https://www.kaggle.com/competitions/planet-understanding-the-amazon-from-space/data
