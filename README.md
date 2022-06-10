@@ -30,11 +30,13 @@ My vision for this project was to use combine my Data Science learning and Satel
 <br>
  
 ## **Planning & Presentation**
-I am a very visual worker. My life and brain exists on the platform [Miro](https://miro.com/) which is the best online whiteboard I have found so far. You may be amused to hear that I have successfully workshoped virtual dates whilst in a long distance relationship on Miro! If interested I have linked my Miro workspace, final presentation and a few resources. If you ever want to talk about visual learning and collaboration platforms please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/josephluiz/). 
+I am a very visual worker. My life and brain exists on the platform [Miro](https://miro.com/) which is the best online whiteboard I have found so far. You may be amused to learn that I have successfully workshoped both business strategy and virtual dates whilst in a long distance relationship on Miro! If interested I have linked my Miro workspace, final presentation and a few resources. If you ever want to talk about visual learning and collaboration platforms please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/josephluiz/). 
 
-- [Presentation](https://drive.google.com/file/d/1CND-X45VzhJ2QVZEpqS8GFkkZkw2EZrk/view?usp=sharing): If you would like to explore side or watch my 5 min pressentation
-- [Miro Workspace](https://miro.com/app/board/uXjVO2axXTY=/?share_link_id=285273823775): This is where my visualy capture my brain, excuse the mess
+- [Presentation](https://drive.google.com/file/d/1SkIfS8OEH58eyRwc0066jbVY2tk15MhJ/view?usp=sharing): If you would like watch my 5 min walkthrough
+- [Miro Workspace](https://miro.com/app/board/uXjVO2axXTY=/?share_link_id=285273823775): This is where I visually capture my brain, excuse the mess
 - [Project Gannt](https://miro.com/app/board/uXjVO1LxdYg=/?share_link_id=321967812507): Done in Miro and shared with my cohort to help them manage their delivery timeline
+
+<br>
 
 
 # **Modeling**
