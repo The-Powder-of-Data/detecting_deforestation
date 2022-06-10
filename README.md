@@ -30,11 +30,13 @@ My vision for this project was to use combine my Data Science learning and Satel
 <br>
  
 ## **Planning & Presentation**
-I am a very visual worker. My life and brain exists on the platform Miro which is the best online whiteboard I have found so far. You may be amused to hear that I have successfully workshoped virtual dates whilst in a long distance relationship on Miro! If interested I have linked my Miro workspace, final presentation and a few resources. If you ever want to talk about visual learning and collaboration platforms please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/josephluiz/). 
+I am a very visual worker. My life and brain exists on the platform [Miro](https://miro.com/) which is the best online whiteboard I have found so far. You may be amused to hear that I have successfully workshoped virtual dates whilst in a long distance relationship on Miro! If interested I have linked my Miro workspace, final presentation and a few resources. If you ever want to talk about visual learning and collaboration platforms please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/josephluiz/). 
 
+- [Presentation](https://drive.google.com/drive/folders/1KLBGpSo2WdzWnUQIQLrGcVu8kIcwTgxp?usp=sharing): If you would like to explore side or watch a recording
 - [Miro Workspace](https://miro.com/app/board/uXjVO2axXTY=/?share_link_id=285273823775): This is where my visualy capture my brain, excuse the mess
-- [Presentation Recording](): If you would like to watch the 5 minute presentation (coming soon)
 - [Project Gannt](https://miro.com/app/board/uXjVO1LxdYg=/?share_link_id=321967812507): Done in Miro and shared with my cohort to help them manage their delivery timeline
+
+#### test link
 
 # **Modeling**
 ## **Multi Label Classification**
@@ -49,8 +51,8 @@ For this example dataset you could choose not to do any pre-processing as the sa
 <br>
  
 ### **Results & Application**
-FastAI was a great library once learning the basics. Using a I was able to get strong results using a few techniques.
-- Transfer learning on a Resnet50 architecture and imagenet weights
+FastAI was a great library once learning the basics. I was able to get strong results using a few techniques.
+- Transfer learning starting with a Resnet50 architecture and imagenet weights
 - Discriminate Learning Rates
 - Image sizing trick to increase the size of our dataset
 <br>
@@ -77,7 +79,7 @@ I also experimented with using a smooth blending technique where tiles overlap a
 Using the Unet approach as my final model converged on a reasonable Jaccard Coefficient (similar to Mean IOU) of 0.73.
 ![UNet Results](output/content/Unet_param_3.jpg)
 ![Evan Metric](output/content/segment_result_eval.jpg)
-Originally this model was trained on a [dataset](https://www.kaggle.com/datasets/humansintheloop/semantic-segmentation-of-aerial-imagery) of Dubai with 6 labels. After tuning the model to satisfactory levels, I experimented with predicting segmentation masks on BC satellite images. Even though this model was trained in a different context (Dubai) than what its intended application was to be (logging in BC) it is a starting step to this continued experiment. To my suprise the model was able to pick out features such as clear cut forest quite well. The next steps would be to aquire training mask data for the intended region of use and compare results.
+Originally this model was trained on a [dataset](https://www.kaggle.com/datasets/humansintheloop/semantic-segmentation-of-aerial-imagery) of Dubai with 6 labels. After tuning the model to satisfactory levels, I experimented with predicting segmentation masks on BC satellite images. Even though this model was trained in a different context (Dubai) than what its intended application was to be (logging in BC) it is a starting step to this continued experiment. To my suprise the model was able to pick out features such as clear cut forest quite well. The next steps would be to aquire training mask data for the intended region of use and compare results. As this is a supervised approach the training segmentation masks may have to be created manually by SMEs. 
 ![BC Example](output/content/segment_result_bc.jpg)
 ![BC Example](output/content/segment_result_bc2.jpg)
  
@@ -107,7 +109,7 @@ As I learn more about Streamlit I was able to get an MVP ready within the short 
 <br>
  
 As a result of my explorations I created a streamlit script to host this model as a proof of concept. I used a slider to help users explore the results of their uploaded image.
-![Streamlit Example](output/content/streamlit_eg_2.jpg)
+![Streamlit Example](output/content/Streamlit_output_vert.jpg)
  
 # Resources
  
@@ -139,6 +141,7 @@ As a result of my explorations I created a streamlit script to host this model a
 - [Satellite-image-deep-learning](https://github.com/robmarkcole/satellite-image-deep-learning)
 - [Streamlit Walkthrough](https://www.youtube.com/watch?v=vIQQR_yq-8I)
 - [Smooth Blend Patches](https://github.com/Vooban/Smoothly-Blend-Image-Patches)
+- [Fastai Example Notebook](https://colab.research.google.com/github/karthikraja95/fsdl_deforestation_detection/blob/master/fsdl_deforestation_detection/experimental/FSDL_Final_Model.ipynb#scrollTo=Jkb6LxYVkDQf)
 - [GCP Flask Setup](https://www.section.io/engineering-education/deploy-flask-to-gce/)
 - [Deploy a ML Flywheel](https://www.youtube.com/watch?v=fw6NMQrYc6w)
 - [Planet API Example](https://github.com/planetlabs/notebooks/blob/master/jupyter-notebooks/data-api-tutorials/search_and_download_quickstart.ipynb)
